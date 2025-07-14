@@ -1,0 +1,19 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|MultiEdit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ./.claude/hooks/prettier-format.sh"
+          },
+          {
+            "type": "command",
+            "command": "bash ./.claude/hooks/eslint-check.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
